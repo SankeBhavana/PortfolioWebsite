@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#050505] text-[#e5e2e1] min-h-screen overflow-x-hidden font-sans">
+
+<main class="pt-32 pb-20 relative">
+<!-- NAVBAR START -->
+<nav class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[#050505]/40 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+  
+  <div class="flex justify-between items-center h-20 px-8 max-w-[1400px] mx-auto">
+
+    <!-- Logo -->
+    <div class="text-xl font-black tracking-widest text-white italic">
+      Bhavana Sanke
+    </div>
+
+    <!-- Links -->
+    <div class="hidden md:flex items-center gap-8 uppercase text-xs font-semibold tracking-wider">
+      <a href="index.html" class="text-slate-400 hover:text-white transition-colors">
+        Home
+      </a>
+      <a href="portfolio.html" class="text-slate-400 hover:text-white transition-colors">
+        Portfolio
+      </a>
+      <a href="techstack.html" class="text-slate-400 hover:text-white transition-colors">
+        Tech Stack
+      </a>
+      <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">
+        Contact
+      </a>
+    </div>
+
+    <!-- Button -->
+    <div class="flex items-center gap-4">
+      <a href="contact.html">
+        <button class="px-6 py-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold shadow-[0_0_25px_rgba(168,85,247,0.25)] hover:scale-105 active:scale-95 transition-transform">
+          Let's Build
+        </button>
+      </a>
+    </div>
+
+  </div>
+</nav>
+<!-- NAVBAR END -->
+  <!-- HERO -->
+  <section class="text-center max-w-5xl mx-auto px-6 space-y-6">
+    <p class="text-purple-400 uppercase tracking-widest text-sm">
+      Curation 2025
+    </p>
+
+    <h1 class="text-6xl font-bold">
+      Selected
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+        Works
+      </span>
+    </h1>
+
+    <p class="text-white/60 max-w-2xl mx-auto">
+      A collection of real-world projects across React, WordPress,
+      WooCommerce, and enterprise systems.
+    </p>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="flex flex-wrap justify-center gap-3 mt-12 px-6">
+    <button onclick="filterProjects('All')" class="filter-btn px-6 py-2 rounded-full border text-xs uppercase bg-purple-600 text-white">All Projects</button>
+    <button onclick="filterProjects('React Apps')" class="filter-btn px-6 py-2 rounded-full border text-xs uppercase text-slate-400">React Apps</button>
+    <button onclick="filterProjects('WordPress')" class="filter-btn px-6 py-2 rounded-full border text-xs uppercase text-slate-400">WordPress</button>
+    <button onclick="filterProjects('WooCommerce')" class="filter-btn px-6 py-2 rounded-full border text-xs uppercase text-slate-400">WooCommerce</button>
+    <button onclick="filterProjects('DotNet')" class="filter-btn px-6 py-2 rounded-full border text-xs uppercase text-slate-400">DotNet</button>
+  </section>
+
+  <!-- FEATURE PROJECT -->
+  <section class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 mt-16">
+    <div class="p-8 border border-white/10 rounded-xl">
+      <div class="flex gap-2 mb-4 flex-wrap">
+        <span class="text-[10px] uppercase border px-2 py-1 rounded text-purple-300">
+          React Project
+        </span>
+        <span class="text-[10px] uppercase border px-2 py-1 rounded text-blue-300">
+          Next.js / React
+        </span>
+      </div>
+
+      <h2 class="text-3xl font-bold">Zennex Solutions</h2>
+
+      <p class="text-white/60 mt-4">
+        Enterprise-level digital solution platform built with React for scalable business workflows.
+      </p>
+
+      <a href="https://zennexsolutions.com/" target="_blank" class="mt-6 inline-block text-purple-400 hover:text-white">
+        View Live Project →
+      </a>
+    </div>
+
+    <img
+      src="/zennex.png"
+      alt="project"
+      class="rounded-xl object-cover w-full h-full opacity-80 hover:scale-105 transition duration-500"
+    />
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 mt-20 grid md:grid-cols-3 gap-6">
+
+    <!-- Project Card -->
+    <div class="project border border-white/10 p-6 rounded-xl" data-category="React Apps">
+      <h3 class="font-bold text-xl">Zennex Solutions</h3>
+      <p class="text-white/60 text-sm mt-2">React / Business Platform</p>
+      <a href="https://zennexsolutions.com/" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+    <div class="project border border-white/10 p-6 rounded-xl" data-category="React Apps">
+      <h3 class="font-bold text-xl">Lordist Warehouse System</h3>
+      <p class="text-white/60 text-sm mt-2">React ERP System</p>
+      <a href="https://lordist.com/product/warehouse-management-system" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+        <div class="project border border-white/10 p-6 rounded-xl" data-category="React Apps">
+      <h3 class="font-bold text-xl">Riya Interior</h3>
+      <p class="text-white/60 text-sm mt-2">React Interior Design Site</p>
+      <a href="https://riyainterior.in/" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+    <div class="project border border-white/10 p-6 rounded-xl" data-category="WooCommerce">
+      <h3 class="font-bold text-xl">Dilaraa Jewellery</h3>
+      <p class="text-white/60 text-sm mt-2">WooCommerce Store</p>
+      <a href="https://dilaraajewellery.com/" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+
+    <div class="project border border-white/10 p-6 rounded-xl" data-category="WooCommerce">
+      <h3 class="font-bold text-xl">Denyx Perfume</h3>
+      <p class="text-white/60 text-sm mt-2">WooCommerce Store</p>
+      <a href="https://denyxperfume.com/" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+
+    <div class="project border border-white/10 p-6 rounded-xl" data-category="WordPress">
+      <h3 class="font-bold text-xl">Eduardo Accostupa</h3>
+      <p class="text-white/60 text-sm mt-2">WordPress Portfolio Site</p>
+      <a href="https://eduardoaccostupa.com/" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+    <div class="project border border-white/10 p-6 rounded-xl" data-category="DotNet">
+      <h3 class="font-bold text-xl">Helmut Jewelry</h3>
+      <p class="text-white/60 text-sm mt-2">ASP.NET E-commerce System</p>
+      <a href="https://helmutjewelry.com/Brands.aspx" target="_blank" class="text-purple-400 text-sm mt-3 inline-block">Visit →</a>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-4xl mx-auto px-6 mt-24 text-center border border-white/10 p-10 rounded-2xl">
+    <h2 class="text-3xl font-bold">
+      Have a vision for your next digital product?
+    </h2>
+
+    <p class="text-white/60 mt-4">
+      Let's build scalable, modern, high-performance web experiences.
+    </p>
+
+    <a href="/contact.html" class="mt-6 inline-block px-8 py-3 rounded-full bg-purple-600 text-white font-bold">
+      START A CONVERSATION
+    </a>
+  </section>
+
+</main>
+
+<!-- FILTER SCRIPT -->
+<script>
+function filterProjects(category) {
+  const projects = document.querySelectorAll(".project");
+
+  projects.forEach(project => {
+    if (category === "All" || project.dataset.category === category) {
+      project.style.display = "block";
+    } else {
+      project.style.display = "none";
+    }
+  });
+
+  // active button style
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.remove("bg-purple-600", "text-white");
+    btn.classList.add("text-slate-400");
+  });
+
+  event.target.classList.add("bg-purple-600", "text-white");
+}
+</script>
+
+</body>
+</html>
